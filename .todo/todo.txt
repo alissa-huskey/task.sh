@@ -1,0 +1,7 @@
+2020-09-11 allow multiple comma-seperted tasks, possibly using -t
+2020-09-11 replace $project and ${project} with the @project value in @desc
+2020-09-11 provide support for @needs and Setup::*() (@provides?)
+2020-09-11 add -q|--quiet mode
+2020-09-11 fix missing @project line dying silently @bug
+2020-09-11 more detailed help
+2020-09-11 test NOCOLOR, COLOR_TASK COLOR_ERROR

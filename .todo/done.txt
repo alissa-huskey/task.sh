@@ -1,0 +1,5 @@
+x 2020-09-11 2020-09-11 add --verbose mode
+
+x 2020-09-11 2020-09-11 provide some kind of runner so that tasks internals can be dry-run
+x 2020-09-11 2020-09-11 add -f|--taskfile flag
+x 2020-09-11 2020-09-11 add -v|--version

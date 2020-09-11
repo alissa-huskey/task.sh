@@ -1,0 +1,13 @@
+# shellcheck shell=bash
+
+rootdir="${BASH_SOURCE%/*}"
+
+: @project "test-taskfile"
+
+Task::test() {
+  : @desc "run tests"
+
+	Runner::run echo "running tests..."
+}
+
+# vim:ft=bash

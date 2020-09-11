@@ -1,0 +1,43 @@
+# shellcheck shell=bash
+
+rootdir="${BASH_SOURCE%/*}"
+
+: @project "task.sh"
+
+Setup:dirs() {
+  : "${PREFIX:=/usr/local}"
+  bindir="${PREFIX}/bin"
+}
+
+Task::test() {
+  : @desc "run tests"
+
+	Runner::run bats ${rootdir}/tests
+}
+
+Task::install() {
+  : @desc "install task.sh"
+
+  local bindir
+  Setup:dirs
+
+	Runner::run install -m 755 task.sh ${bindir}/task
+}
+
+Task::uninstall() {
+  : @desc "uninstall task.sh"
+
+  local bindir
+  Setup:dirs
+
+	Runner::run rm -f ${bindir:?}/task
+}
+
+Task::reinstall() {
+  : @desc "reinstall task.sh"
+
+  Task::uninstall
+  Task::install
+}
+
+# vim:ft=bash
